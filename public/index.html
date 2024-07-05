@@ -1,24 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 		<link rel="stylesheet" href="css/style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Biryani:wght@200;300;400;600;700;800;900&family=Federo&display=swap" rel="stylesheet" />
 		<title>Home</title>
 	</head>
 	<body>
 		<!-- navbar -->
-		<nav class="flex justify-between items-center px-10 py-4 md:px-24">
-			<div class="w-12 h-12">
-				<img src="/public/img/logo.png" alt="Logo" />
+		<nav class="flex justify-between items-center px-8 py-4 lg:px-64 xl:px-72 font-anonymousPro font-semibold shadow fixed top-0 left-0 right-0 z-10 bg-[#fff]">
+			<div class="bg-gradient-to-r from-tomato to-vividSkyBlue bg-clip-text text-transparent font-federo">
+				<h1 class="text-3xl uppercase italic font-bold">ziyad.</h1>
 			</div>
 			<div class="hidden md:block">
-				<ul class="flex gap-3">
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Works</a></li>
-					<li><a href="#">Blog</a></li>
-					<li><a href="#">About</a></li>
+				<ul class="flex gap-4">
+					<li class="hover:scale-105 transition">
+						<a href="#" class="text-xl text-blackOlive hover:text-vividSkyBlue transition after:content[''] after:block after:scale-x-0 hover:after:scale-x-100 after:h-1 after:bg-vividSkyBlue after:origin-left after:transition">Home</a>
+					</li>
+					<li class="hover:scale-105 transition">
+						<a href="#" class="text-xl text-blackOlive hover:text-vividSkyBlue transition after:content[''] after:block after:scale-x-0 hover:after:scale-x-100 after:h-1 after:bg-vividSkyBlue after:origin-left after:transition">Works</a>
+					</li>
+					<li class="hover:scale-105 transition">
+						<a href="#" class="text-xl text-blackOlive hover:text-vividSkyBlue transition after:content[''] after:block after:scale-x-0 hover:after:scale-x-100 after:h-1 after:bg-vividSkyBlue after:origin-left after:transition">Blog</a>
+					</li>
+					<li class="hover:scale-105 transition">
+						<a href="#" class="text-xl text-blackOlive hover:text-vividSkyBlue transition after:content[''] after:block after:scale-x-0 hover:after:scale-x-100 after:h-1 after:bg-vividSkyBlue after:origin-left after:transition">About</a>
+					</li>
 				</ul>
 			</div>
 			<button class="md:hidden z-10" id="hamburger">
@@ -31,7 +42,7 @@
 		<aside class="absolute flex flex-col gap-6 w-full top-0 bottom-0 left-0 right-0 translate-x-[-100%] px-6 py-4 bg-slate-600 transition-all duration-500" id="sidebar">
 			<div class="flex gap-4 items-center">
 				<div class="w-12 h-12 rounded-full overflow-hidden">
-					<img src="/public/img/logo.png" alt="Logo" />
+					<img src="/img/logo.png" alt="Logo" />
 				</div>
 				<span class="font-medium text-lg">Ziyad Alwafie</span>
 			</div>
@@ -57,6 +68,139 @@
 
 		<!-- end navbar -->
 
-		<script src="/public/js/script.js"></script>
+		<!-- hero section -->
+		<section class="mt-28 px-8 py-4 lg:px-64 xl:px-72 flex justify-between items-center gap-60">
+			<div class="flex flex-col gap-5">
+				<h1 class="font-federo font-bold text-4xl text-blackOlive">Hi, I'm Ziyad Alwafie,<br />Creative Developer</h1>
+				<p class="font-light font-biryani text-base">I bridge the gap between design and development, building beautiful and functional experiences.</p>
+				<div class="flex gap-3 font-anonymousPro">
+					<a href="" class="px-4 py-2 rounded-full border border-blackOlive text-blackOlive capitalize hover:border-vividSkyBlue hover:text-vividSkyBlue transition hover:shadow hover:shadow-vividSkyBlue hover:-translate-y-[2px]"
+						>download resume</a
+					>
+					<a href="" class="px-4 py-2 rounded-full border border-blackOlive text-blackOlive capitalize hover:border-vividSkyBlue hover:text-vividSkyBlue transition hover:shadow hover:shadow-vividSkyBlue hover:-translate-y-[2px]"
+						>contact me</a
+					>
+				</div>
+			</div>
+			<div>
+				<img src="img/profile.svg" alt="Ziyad Alwafie" width="700" />
+			</div>
+		</section>
+		<!-- end hero section -->
+
+		<!-- works -->
+		<section class="mt-28 px-8 py-4 lg:px-64 xl:px-72">
+			<div class="flex items-center gap-3 mb-10">
+				<h1 class="text-4xl font-federo font-bold text-blackOlive capitalize italic">works</h1>
+				<div class="border-y-2 w-10 border-blackOlive rounded-tl-full rounded-br-full"></div>
+			</div>
+
+			<div class="flex flex-col gap-5">
+				<div class="flex items-center gap-8">
+					<img src="img/works/default.svg" alt="Project" width="300" />
+					<div class="flex items-stretch flex-col gap-3">
+						<div class="flex gap-3">
+							<span class="px-4 py-1 rounded-full bg-platinum text-blackOlive capitalize font-federo font-semibold tracking-wider">category</span>
+							<span>|</span>
+							<span>created at 2024</span>
+						</div>
+						<h3 class="text-2xl font-bold font-federo text-blackOlive capitalize">Lorem ipsum dolor sit amet.</h3>
+						<p class="font-biryani font-light text-sm">
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus, eveniet. Ipsum maxime culpa odio, praesentium reprehenderit consequuntur temporibus error cupiditate similique quisquam quia ea, quibusdam adipisci tempore
+							assumenda tenetur. Aperiam.
+						</p>
+						<div class="flex justify-end items-center gap-5">
+							<a href="" class="hover:text-tomato transition">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-share-fill" viewBox="0 0 16 16">
+									<path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.5 2.5 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5" />
+								</svg>
+							</a>
+							<a href="" class="hover:text-tomato transition">
+								<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-balloon-heart" viewBox="0 0 16 16">
+									<path
+										fill-rule="evenodd"
+										d="m8 2.42-.717-.737c-1.13-1.161-3.243-.777-4.01.72-.35.685-.451 1.707.236 3.062C4.16 6.753 5.52 8.32 8 10.042c2.479-1.723 3.839-3.29 4.491-4.577.687-1.355.587-2.377.236-3.061-.767-1.498-2.88-1.882-4.01-.721zm-.49 8.5c-10.78-7.44-3-13.155.359-10.063q.068.062.132.129.065-.067.132-.129c3.36-3.092 11.137 2.624.357 10.063l.235.468a.25.25 0 1 1-.448.224l-.008-.017c.008.11.02.202.037.29.054.27.161.488.419 1.003.288.578.235 1.15.076 1.629-.157.469-.422.867-.588 1.115l-.004.007a.25.25 0 1 1-.416-.278c.168-.252.4-.6.533-1.003.133-.396.163-.824-.049-1.246l-.013-.028c-.24-.48-.38-.758-.448-1.102a3 3 0 0 1-.052-.45l-.04.08a.25.25 0 1 1-.447-.224l.235-.468ZM6.013 2.06c-.649-.18-1.483.083-1.85.798-.131.258-.245.689-.08 1.335.063.244.414.198.487-.043.21-.697.627-1.447 1.359-1.692.217-.073.304-.337.084-.398"
+									/>
+								</svg>
+							</a>
+							<a href="" class="font-anonymousPro px-4 py-1 rounded-full border border-blackOlive hover:text-tomato hover:border-tomato hover:shadow hover:shadow-tomato hover:-translate-y-[2px] capitalize text-blackOlive transition"
+								>read more</a
+							>
+						</div>
+					</div>
+				</div>
+
+				<div class="flex items-center gap-8">
+					<img src="img/works/default.svg" alt="Project" width="300" />
+					<div class="flex items-stretch flex-col gap-3">
+						<div class="flex gap-3">
+							<span class="px-4 py-1 rounded-full bg-platinum text-blackOlive capitalize font-federo font-semibold tracking-wider">category</span>
+							<span>|</span>
+							<span>created at 2024</span>
+						</div>
+						<h3 class="text-2xl font-bold font-federo text-blackOlive capitalize">Lorem ipsum dolor sit amet.</h3>
+						<p class="font-biryani font-light text-sm">
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus, eveniet. Ipsum maxime culpa odio, praesentium reprehenderit consequuntur temporibus error cupiditate similique quisquam quia ea, quibusdam adipisci tempore
+							assumenda tenetur. Aperiam.
+						</p>
+						<div class="flex justify-end items-center gap-5">
+							<a href="" class="hover:text-tomato transition">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-share-fill" viewBox="0 0 16 16">
+									<path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.5 2.5 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5" />
+								</svg>
+							</a>
+							<a href="" class="hover:text-tomato transition">
+								<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-balloon-heart" viewBox="0 0 16 16">
+									<path
+										fill-rule="evenodd"
+										d="m8 2.42-.717-.737c-1.13-1.161-3.243-.777-4.01.72-.35.685-.451 1.707.236 3.062C4.16 6.753 5.52 8.32 8 10.042c2.479-1.723 3.839-3.29 4.491-4.577.687-1.355.587-2.377.236-3.061-.767-1.498-2.88-1.882-4.01-.721zm-.49 8.5c-10.78-7.44-3-13.155.359-10.063q.068.062.132.129.065-.067.132-.129c3.36-3.092 11.137 2.624.357 10.063l.235.468a.25.25 0 1 1-.448.224l-.008-.017c.008.11.02.202.037.29.054.27.161.488.419 1.003.288.578.235 1.15.076 1.629-.157.469-.422.867-.588 1.115l-.004.007a.25.25 0 1 1-.416-.278c.168-.252.4-.6.533-1.003.133-.396.163-.824-.049-1.246l-.013-.028c-.24-.48-.38-.758-.448-1.102a3 3 0 0 1-.052-.45l-.04.08a.25.25 0 1 1-.447-.224l.235-.468ZM6.013 2.06c-.649-.18-1.483.083-1.85.798-.131.258-.245.689-.08 1.335.063.244.414.198.487-.043.21-.697.627-1.447 1.359-1.692.217-.073.304-.337.084-.398"
+									/>
+								</svg>
+							</a>
+							<a href="" class="font-anonymousPro px-4 py-1 rounded-full border border-blackOlive hover:text-tomato hover:border-tomato hover:shadow hover:shadow-tomato hover:-translate-y-[2px] capitalize text-blackOlive transition"
+								>read more</a
+							>
+						</div>
+					</div>
+				</div>
+
+				<div class="flex items-center gap-8">
+					<img src="img/works/default.svg" alt="Project" width="300" />
+					<div class="flex items-stretch flex-col gap-3">
+						<div class="flex gap-3">
+							<span class="px-4 py-1 rounded-full bg-platinum text-blackOlive capitalize font-federo font-semibold tracking-wider">category</span>
+							<span>|</span>
+							<span>created at 2024</span>
+						</div>
+						<h3 class="text-2xl font-bold font-federo text-blackOlive capitalize">Lorem ipsum dolor sit amet.</h3>
+						<p class="font-biryani font-light text-sm">
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus, eveniet. Ipsum maxime culpa odio, praesentium reprehenderit consequuntur temporibus error cupiditate similique quisquam quia ea, quibusdam adipisci tempore
+							assumenda tenetur. Aperiam.
+						</p>
+						<div class="flex justify-end items-center gap-5">
+							<a href="" class="hover:text-tomato transition">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-share-fill" viewBox="0 0 16 16">
+									<path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.5 2.5 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5" />
+								</svg>
+							</a>
+							<a href="" class="hover:text-tomato transition">
+								<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-balloon-heart" viewBox="0 0 16 16">
+									<path
+										fill-rule="evenodd"
+										d="m8 2.42-.717-.737c-1.13-1.161-3.243-.777-4.01.72-.35.685-.451 1.707.236 3.062C4.16 6.753 5.52 8.32 8 10.042c2.479-1.723 3.839-3.29 4.491-4.577.687-1.355.587-2.377.236-3.061-.767-1.498-2.88-1.882-4.01-.721zm-.49 8.5c-10.78-7.44-3-13.155.359-10.063q.068.062.132.129.065-.067.132-.129c3.36-3.092 11.137 2.624.357 10.063l.235.468a.25.25 0 1 1-.448.224l-.008-.017c.008.11.02.202.037.29.054.27.161.488.419 1.003.288.578.235 1.15.076 1.629-.157.469-.422.867-.588 1.115l-.004.007a.25.25 0 1 1-.416-.278c.168-.252.4-.6.533-1.003.133-.396.163-.824-.049-1.246l-.013-.028c-.24-.48-.38-.758-.448-1.102a3 3 0 0 1-.052-.45l-.04.08a.25.25 0 1 1-.447-.224l.235-.468ZM6.013 2.06c-.649-.18-1.483.083-1.85.798-.131.258-.245.689-.08 1.335.063.244.414.198.487-.043.21-.697.627-1.447 1.359-1.692.217-.073.304-.337.084-.398"
+									/>
+								</svg>
+							</a>
+							<a href="" class="font-anonymousPro px-4 py-1 rounded-full border border-blackOlive hover:text-tomato hover:border-tomato hover:shadow hover:shadow-tomato hover:-translate-y-[2px] capitalize text-blackOlive transition"
+								>read more</a
+							>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end works -->
+
+		<script src="js/script.js"></script>
 	</body>
 </html>
