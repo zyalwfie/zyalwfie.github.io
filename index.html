@@ -12,33 +12,28 @@
 	</head>
 	<body>
 		<!-- navbar -->
-		<nav class="flex justify-between items-center px-8 py-4 lg:px-24 xl:px-72 font-anonymousPro font-semibold shadow fixed top-0 left-0 right-0 z-10 bg-[#fff]">
-			<div class="bg-gradient-to-r from-tomato to-vividSkyBlue bg-clip-text text-transparent font-federo">
+		<nav class="flex justify-center md:justify-between items-center px-8 py-4 lg:px-24 xl:px-72 font-anonymousPro font-semibold shadow fixed top-0 left-0 right-0 z-10 bg-[#fff]">
+			<div class="bg-gradient-to-r hidden md:block from-tomato to-vividSkyBlue bg-clip-text text-transparent font-federo">
 				<h1 class="text-3xl uppercase italic font-bold">ziyad.</h1>
 			</div>
-			<div class="hidden md:block">
-				<ul class="flex gap-4 group/parent text-blackOlive hover:text-platinum">
-					<li class="hover:scale-105 transition">
-						<a href="#hero" class="text-xl hover:text-vividSkyBlue transition after:content[''] after:block after:scale-x-0 hover:after:scale-x-100 after:h-1 after:bg-vividSkyBlue after:origin-left after:transition">Home</a>
-					</li>
-					<li class="hover:scale-105 transition">
-						<a href="#works" class="text-xl hover:text-vividSkyBlue transition after:content[''] after:block after:scale-x-0 hover:after:scale-x-100 after:h-1 after:bg-vividSkyBlue after:origin-left after:transition">Works</a>
-					</li>
-					<li class="hover:scale-105 transition">
-						<a href="#blogs" class="text-xl hover:text-vividSkyBlue transition after:content[''] after:block after:scale-x-0 hover:after:scale-x-100 after:h-1 after:bg-vividSkyBlue after:origin-left after:transition">Blog</a>
-					</li>
-					<li class="hover:scale-105 transition">
-						<a href="#about" class="text-xl hover:text-vividSkyBlue transition after:content[''] after:block after:scale-x-0 hover:after:scale-x-100 after:h-1 after:bg-vividSkyBlue after:origin-left after:transition">About</a>
-					</li>
-				</ul>
-			</div>
-			<button class="md:hidden z-10" id="hamburger">
-				<span id="list-icon"><i class="bx bx-menu"></i></span>
-				<span class="hidden" id="close-icon"><i class="bx bx-x"></i></span>
-			</button>
+			<ul class="flex gap-4 group/parent text-blackOlive hover:text-platinum flex-grow justify-between md:flex-grow-0">
+				<li class="hover:scale-105 transition">
+					<a href="#hero" class="text-xl hover:text-vividSkyBlue transition after:content[''] after:block after:scale-x-0 hover:after:scale-x-100 after:h-1 after:bg-vividSkyBlue after:origin-left after:transition">Home</a>
+				</li>
+				<li class="hover:scale-105 transition">
+					<a href="#works" class="text-xl hover:text-vividSkyBlue transition after:content[''] after:block after:scale-x-0 hover:after:scale-x-100 after:h-1 after:bg-vividSkyBlue after:origin-left after:transition">Works</a>
+				</li>
+				<li class="hover:scale-105 transition">
+					<a href="#blogs" class="text-xl hover:text-vividSkyBlue transition after:content[''] after:block after:scale-x-0 hover:after:scale-x-100 after:h-1 after:bg-vividSkyBlue after:origin-left after:transition">Blog</a>
+				</li>
+				<li class="hover:scale-105 transition">
+					<a href="#about" class="text-xl hover:text-vividSkyBlue transition after:content[''] after:block after:scale-x-0 hover:after:scale-x-100 after:h-1 after:bg-vividSkyBlue after:origin-left after:transition">About</a>
+				</li>
+			</ul>
 		</nav>
+
 		<!-- sidebar -->
-		<aside class="absolute flex flex-col gap-6 w-full top-0 bottom-0 left-0 right-0 translate-x-[-100%] px-6 py-4 bg-slate-600 transition-all duration-500" id="sidebar">
+		<!-- <aside class="absolute flex flex-col gap-6 top-0 h-screen translate-x-[-100%] px-6 py-4 bg-slate-600 transition-all duration-500 z-20 bg-[#fff]" id="sidebar">
 			<div class="flex gap-4 items-center">
 				<div class="w-12 h-12 rounded-full overflow-hidden">
 					<img src="/img/logo.png" alt="Logo" />
@@ -62,8 +57,9 @@
 					</li>
 				</ul>
 			</div>
-		</aside>
+		</aside> -->
 		<!-- end sidebar -->
+
 		<!-- end navbar -->
 
 		<!-- hero section -->
