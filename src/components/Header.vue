@@ -70,7 +70,8 @@
 				@click="toggleDark()"
 				type="button"
 				class="button">
-				Switch Theme
+				<span class="dark:hidden">Dark Mode</span>
+				<span class="hidden dark:inline">Light Mode</span>
 			</button>
 		</nav>
 
