@@ -10,7 +10,7 @@
 
 <template>
 	<header
-		class="flex items-center px-4 py-6 md:px-8 lg:px-16 xl:px-64 dark:text-white">
+		class="fixed inset-x-0 top-0 z-10 flex items-center px-4 py-6 md:px-8 lg:px-16 xl:px-64 dark:text-white">
 		<a
 			href="#"
 			class="font-federo uppercase text-3xl font-bold">
@@ -48,29 +48,29 @@
 		</nav>
 
 		<nav
-			class="hidden md:flex flex-1 justify-end items-center gap-x-8 capitalize">
+			class="hidden md:flex flex-1 justify-end items-center gap-x-8">
 			<div class="flex gap-x-4">
 				<a
 					href="#"
 					class="text-lg transition hover:text-gray-500">
-					services
+					Services
 				</a>
 				<a
 					href="#"
 					class="text-lg transition hover:text-gray-500">
-					projects
+					Projects
 				</a>
 				<a
 					href="#"
 					class="text-lg transition hover:text-gray-500">
-					about
+					About
 				</a>
 			</div>
 			<button
 				@click="toggleDark()"
 				type="button"
 				class="button">
-				switch theme
+				Switch Theme
 			</button>
 		</nav>
 

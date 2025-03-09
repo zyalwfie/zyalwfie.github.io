@@ -17,5 +17,5 @@
 }
 
 @utility button {
-  @apply dark:text-white dark:bg-black dark:border-white px-4 py-2 capitalize border dark:shadow-[5px_5px_0_#fff] transition cursor-pointer shadow-[5px_5px_0] hover:translate-y-px hover:shadow-[2px_2px_0];
+  @apply dark:text-white dark:bg-black dark:border-white px-4 py-2 border dark:shadow-[5px_5px_0_#fff] transition cursor-pointer shadow-[5px_5px_0] hover:translate-y-px hover:shadow-[2px_2px_0];
 }
