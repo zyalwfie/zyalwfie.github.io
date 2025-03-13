@@ -32,36 +32,63 @@
 			class="font-federo uppercase text-3xl font-bold">
 			ziyad
 		</a>
-
-		<nav
-			v-if="isOpen"
-			class="fixed inset-0 flex justify-end backdrop-blur-md">
-			<div
-				class="h-full w-3/4 bg-white dark:bg-gray-500 p-8 flex flex-col gap-y-4 shadow">
-				<a
-					href="#"
-					class="font-federo uppercase text-3xl font-bold">
-					ziyad
-				</a>
-				<div class="flex flex-col gap-y-2">
-					<a
-						href=""
-						class="font-medium capitalize dark:text-white">
-						services
-					</a>
-					<a
-						href=""
-						class="font-medium capitalize dark:text-white">
-						projects
-					</a>
-					<a
-						href=""
-						class="font-medium capitalize dark:text-white">
-						about
-					</a>
+		<Transition>
+			<nav
+				v-show="isOpen"
+				:class="{ 'translate-x-0': isOpen }"
+				class="fixed z-20 inset-0 bg-white dark:bg-black flex flex-col justify-between transition px-4 py-6 md:px-8 lg:px-16 xl:px-64 lg:hidden">
+				<div class="flex justify-between items-center">
+					<div class="flex items-center gap-x-4">
+						<div
+							class="size-16 border-2 shadow-[5px_5px_0] text-2xl font-bold font-federo text-center leading-[64px]">
+							ZA
+						</div>
+						<div class="flex flex-col gap-y-px">
+							<h1 class="font-federo text-lg font-bold">
+								Ziyad Alwafie
+							</h1>
+							<p class="text-sm">Fullstack Developer</p>
+						</div>
+					</div>
+					<button
+						@click="isOpen = !isOpen"
+						class="flex items-center">
+						<i class="bx bx-x bx-sm"></i>
+					</button>
 				</div>
-			</div>
-		</nav>
+				<div class="my-20 border-t"></div>
+				<div class="flex flex-col md:items-center gap-y-4">
+					<a href="#">Services</a>
+					<a href="#">Projects</a>
+					<a href="#">About</a>
+				</div>
+				<div class="my-20 border-t"></div>
+				<div class="flex justify-between">
+					<div class="flex gap-x-4">
+						<a href="#">
+							<i class="bx bxl-instagram bx-sm"></i>
+						</a>
+						<a href="#">
+							<i class="bx bxl-github bx-sm"></i>
+						</a>
+						<a href="#">
+							<i class="bx bxl-linkedin bx-sm"></i>
+						</a>
+					</div>
+					<button
+						@click="toggleDark()"
+						type="button"
+						class="button">
+						<span class="dark:hidden flex items-center">
+							<i class="bx bx-moon"></i>
+						</span>
+						<span class="hidden dark:flex items-center">
+							<i class="bx bx-sun"></i>
+						</span>
+					</button>
+				</div>
+			</nav>
+		</Transition>
 
 		<nav class="hidden md:flex flex-1 justify-end items-center gap-x-8">
 			<div class="flex gap-x-4">
@@ -86,23 +113,30 @@
 				type="button"
 				class="button">
 				<span class="dark:hidden flex items-center">
-					<i class='bx bx-moon'></i>
+					<i class="bx bx-moon"></i>
 				</span>
 				<span class="hidden dark:flex items-center">
-					<i class='bx bx-sun'></i>
+					<i class="bx bx-sun"></i>
 				</span>
 			</button>
 		</nav>
-
 		<button
 			@click="isOpen = !isOpen"
-			class="flex items-center fixed right-4 z-20 md:hidden">
-			<i
-				v-if="!isOpen"
-				class="bx bx-menu-alt-right bx-sm"></i>
-			<i
-				v-if="isOpen"
-				class="bx bx-x bx-sm"></i>
+			class="flex items-center fixed right-4 md:hidden">
+			<i class="bx bx-menu-alt-right bx-sm"></i>
 		</button>
 	</header>
 </template>
+
+<style>
+	.v-enter-active,
+	.v-leave-active {
+		transform: translateX(0);
+		transition: transform 0.5s ease-in-out;
+	}
+
+	.v-enter-from,
+	.v-leave-to {
+		transform: translateX(-100%);
+	}
+</style>
