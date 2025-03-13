@@ -1,6 +1,6 @@
 <template>
 	<section
-		class="flex h-lvh flex-col gap-y-12 lg:flex-row items-start lg:justify-between lg:items-center px-4 md:px-8 pt-26 md:pt-32 lg:pt-20 lg:px-16 xl:px-64">
+		class="flex md:h-lvh flex-col gap-y-12 lg:flex-row items-start lg:justify-between lg:items-center px-4 md:px-8 pt-26 md:pt-32 lg:pt-20 lg:px-16 xl:px-64">
 		<div
 			class="flex flex-col gap-y-4"
 			data-aos="fade-right"
@@ -10,8 +10,8 @@
 			</h1>
 			<p class="dark:text-white">
 				I bridge the gap between design and development,<br
-					class="hidden lg:block" /> building beautiful and
-				functional experiences.
+					class="hidden lg:block" />
+				building beautiful and functional experiences.
 			</p>
 			<div class="flex gap-3 dark:text-white">
 				<a

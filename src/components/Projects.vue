@@ -27,7 +27,7 @@
 
 <template>
 	<section
-		class="h-lvh lg:items-center px-4 md:px-8 pt-26 md:pt-32 lg:pt-30 lg:px-16 xl:px-64">
+		class="lg:h-lvh lg:items-center px-4 md:px-8 py-28 md:py-34 lg:py-30 lg:px-16 xl:px-64 overflow-hidden">
 		<div class="flex justify-between items-center mb-8 dark:text-white">
 			<h2 class="flex gap-x-4 items-center font-federo">
 				<i class="bx bxs-right-arrow"></i>
@@ -47,7 +47,7 @@
 				:key="project.index"
 				class="relative shadow-[5px_5px_0] border-2 transition-all duration-500 ease-in-out group overflow-hidden dark:text-white">
 				<div
-					class="absolute h-full w-full scale-y-0 origin-top group-hover:scale-y-100 transition duration-500 ease-in-out">
+					class="absolute h-full w-full lg:scale-y-0 origin-top group-hover:scale-y-100 transition duration-500 ease-in-out">
 					<img
 						:src="project.image"
 						alt="Thumbnail"
@@ -63,7 +63,7 @@
 						<i class="bx bx-radio-circle-marked"></i>
 					</div>
 					<div
-						class="group-hover:translate-y-14 transition-all duration-500 ease-in-out">
+						class="translate-y-60 md:translate-y-48 lg:translate-y-0 lg:group-hover:translate-y-14 transition-all duration-500 ease-in-out">
 						<h3
 							class="my-2 text-center font-bold font-federo text-xl tracking-wide">
 							{{ project.title }}
@@ -73,7 +73,7 @@
 				</div>
 
 				<div
-					class="max-h-0 group-hover:max-h-[34px] transition-all ease-in-out duration-500">
+					class="h-62 md:h-52 lg:max-h-0 lg:group-hover:max-h-[34px] transition-all ease-in-out duration-500">
 					<span class="opacity-0">
 						Lorem ipsum dolor sit amet consectetur adipisicing elit.
 						Cupiditate a dolores nesciunt esse harum quidem incidunt
