@@ -1,16 +1,32 @@
 <script setup>
-	import { ref } from 'vue';
+	import { onMounted, onUnmounted, ref } from 'vue';
 	import { useDark, useToggle } from '@vueuse/core';
 
 	const isDark = useDark();
 	const toggleDark = useToggle(isDark);
 
 	const isOpen = ref(false);
+	const hasShadow = ref(false);
+
+	const handleScroll = () => {
+		hasShadow.value = window.scrollY > 10;
+	};
+
+	onMounted(() => {
+		window.addEventListener('scroll', handleScroll);
+	});
+
+	onUnmounted(() => {
+		window.removeEventListener('scroll', handleScroll);
+	});
 </script>
 
 <template>
 	<header
-		class="fixed inset-x-0 top-0 z-10 flex items-center px-4 py-6 md:px-8 lg:px-16 xl:px-64 dark:text-white">
+		:class="[
+			'fixed inset-x-0 top-0 z-10 flex items-center px-4 py-6 md:px-8 lg:px-16 xl:px-64 dark:text-white bg-white dark:bg-black transition-all duration-300',
+			hasShadow ? 'shadow-lg' : 'shadow-none',
+		]">
 		<a
 			href="#"
 			class="font-federo uppercase text-3xl font-bold">
@@ -47,8 +63,7 @@
 			</div>
 		</nav>
 
-		<nav
-			class="hidden md:flex flex-1 justify-end items-center gap-x-8">
+		<nav class="hidden md:flex flex-1 justify-end items-center gap-x-8">
 			<div class="flex gap-x-4">
 				<a
 					href="#"
@@ -70,8 +85,12 @@
 				@click="toggleDark()"
 				type="button"
 				class="button">
-				<span class="dark:hidden">Dark Mode</span>
-				<span class="hidden dark:inline">Light Mode</span>
+				<span class="dark:hidden flex items-center">
+					<i class='bx bx-moon'></i>
+				</span>
+				<span class="hidden dark:flex items-center">
+					<i class='bx bx-sun'></i>
+				</span>
 			</button>
 		</nav>
 
