@@ -28,7 +28,7 @@
 <template>
 	<section
 		id="projects"
-		class="pt-56 flex flex-col justify-center lg:h-lvh lg:items-stretch px-4 md:px-8 lg:px-16 xl:px-64 overflow-hidden">
+		class="pt-32 lg:pt-56 flex flex-col justify-center lg:h-lvh lg:items-stretch px-4 md:px-8 lg:px-16 xl:px-64 overflow-hidden">
 		<div class="flex justify-between items-center mb-8 dark:text-white">
 			<h2 class="flex gap-x-4 items-center font-federo">
 				<i class="bx bxs-right-arrow"></i>
