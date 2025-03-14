@@ -36,7 +36,7 @@
 			<nav
 				v-show="isOpen"
 				:class="{ 'translate-x-0': isOpen }"
-				class="fixed z-20 inset-0 bg-white dark:bg-black flex flex-col justify-between transition px-4 py-6 md:px-8 lg:px-16 xl:px-64 lg:hidden">
+				class="fixed z-20 inset-0 bg-white dark:bg-black flex flex-col justify-between transition px-4 py-6 md:px-8 lg:px-16 xl:px-64 md:hidden">
 				<div class="flex justify-between items-center">
 					<div class="flex items-center gap-x-4">
 						<div
@@ -57,21 +57,22 @@
 					</button>
 				</div>
 				<div class="my-20 border-t"></div>
-				<div class="flex flex-col md:items-center gap-y-4">
-					<a href="#">Services</a>
-					<a href="#">Projects</a>
-					<a href="#">About</a>
+				<div class="flex flex-col gap-y-4">
+					<a href="#hero" @click="isOpen = !isOpen">Home</a>
+					<a href="#services" @click="isOpen = !isOpen">Services</a>
+					<a href="#projects" @click="isOpen = !isOpen">Projects</a>
+					<a href="#about" @click="isOpen = !isOpen">About</a>
 				</div>
 				<div class="my-20 border-t"></div>
 				<div class="flex justify-between">
 					<div class="flex gap-x-4">
-						<a href="#">
+						<a href="https://www.instagram.com/wwfyy_/">
 							<i class="bx bxl-instagram bx-sm"></i>
 						</a>
-						<a href="#">
+						<a href="https://github.com/zyalwfie">
 							<i class="bx bxl-github bx-sm"></i>
 						</a>
-						<a href="#">
+						<a href="https://www.linkedin.com/in/ziyad-alwafie-798373258/">
 							<i class="bx bxl-linkedin bx-sm"></i>
 						</a>
 					</div>
@@ -93,17 +94,22 @@
 		<nav class="hidden md:flex flex-1 justify-end items-center gap-x-8">
 			<div class="flex gap-x-4">
 				<a
-					href="#"
+					href="#hero"
+					class="text-lg transition hover:text-gray-500">
+					Home
+				</a>
+				<a
+					href="#services"
 					class="text-lg transition hover:text-gray-500">
 					Services
 				</a>
 				<a
-					href="#"
+					href="#projects"
 					class="text-lg transition hover:text-gray-500">
 					Projects
 				</a>
 				<a
-					href="#"
+					href="#about"
 					class="text-lg transition hover:text-gray-500">
 					About
 				</a>
@@ -120,6 +126,7 @@
 				</span>
 			</button>
 		</nav>
+
 		<button
 			@click="isOpen = !isOpen"
 			class="flex items-center fixed right-4 md:hidden">

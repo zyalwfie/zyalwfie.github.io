@@ -1,6 +1,6 @@
 <template>
-	<section
-		class="flex md:h-lvh flex-col gap-y-12 lg:flex-row items-start lg:justify-between lg:items-center px-4 md:px-8 pt-26 md:pt-32 lg:pt-20 lg:px-16 xl:px-64">
+	<section id="hero"
+		class="scroll-mt-22 flex md:h-lvh flex-col gap-y-12 lg:flex-row items-start lg:justify-between lg:items-center px-4 md:px-8 pt-26 md:pt-32 lg:pt-20 lg:px-16 xl:px-64">
 		<div
 			class="flex flex-col gap-y-4"
 			data-aos="fade-right"

@@ -27,13 +27,13 @@
 
 <template>
 	<section
-		class="lg:h-lvh lg:items-center px-4 md:px-8 py-28 md:py-34 lg:py-30 lg:px-16 xl:px-64 overflow-hidden">
+		id="projects"
+		class="pt-56 flex flex-col justify-center lg:h-lvh lg:items-stretch px-4 md:px-8 lg:px-16 xl:px-64 overflow-hidden">
 		<div class="flex justify-between items-center mb-8 dark:text-white">
 			<h2 class="flex gap-x-4 items-center font-federo">
 				<i class="bx bxs-right-arrow"></i>
-				<span class="text-3xl font-bold font-federo">Projects</span>
+				<span class="text-4xl font-bold font-federo">Projects</span>
 			</h2>
-
 			<a
 				href="#"
 				class="shadow-[5px_5px_0] px-4 py-1 transition hover:shadow-[2px_2px_0] hover:translate-y-px border-2"
@@ -41,7 +41,7 @@
 			>
 		</div>
 		<div
-			class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-start gap-6">
+			class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-start gap-6">
 			<article
 				v-for="project in projects"
 				:key="project.index"
@@ -53,7 +53,6 @@
 						alt="Thumbnail"
 						class="object-cover" />
 				</div>
-
 				<div class="py-8">
 					<img
 						:src="project.image"
@@ -71,7 +70,6 @@
 						<p class="text-center text-base">{{ project.index }}</p>
 					</div>
 				</div>
-
 				<div
 					class="h-62 md:h-52 lg:max-h-0 lg:group-hover:max-h-[34px] transition-all ease-in-out duration-500">
 					<span class="opacity-0">
