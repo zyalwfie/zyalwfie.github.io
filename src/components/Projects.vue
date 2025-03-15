@@ -3,24 +3,28 @@
 
 	const projects = ref([
 		{
-			title: 'First Project',
+			title: 'Database Warga',
 			index: '01',
-			image: 'https://placehold.co/400',
+			image: '/images/projects-thumbnail/db-warga.png',
+			logo: '/images/projects-logo/db-warga-logo.svg',
 		},
 		{
-			title: 'Second Project',
+			title: 'Fund Together',
 			index: '02',
-			image: 'https://placehold.co/400',
+			image: '/images/projects-thumbnail/fund-together.png',
+			logo: '/images/projects-logo/fund-together-logo.svg',
 		},
 		{
-			title: 'Third Project',
+			title: 'Klik Gontoran',
 			index: '03',
-			image: 'https://placehold.co/400',
+			image: '/images/projects-thumbnail/klik-gontoran.png',
+			logo: '/images/projects-logo/klik-gontoran-logo.svg',
 		},
 		{
-			title: 'Fourth Project',
+			title: 'Kusaku',
 			index: '04',
-			image: 'https://placehold.co/400',
+			image: '/images/projects-thumbnail/kusaku.png',
+			logo: '/images/projects-logo/kusaku-logo.svg',
 		},
 	]);
 </script>
@@ -36,9 +40,9 @@
 			</h2>
 			<a
 				href="#"
-				class="shadow-[5px_5px_0] px-4 py-1 transition hover:shadow-[2px_2px_0] hover:translate-y-px border-2"
-				>See More</a
-			>
+				class="shadow-[5px_5px_0] px-4 py-1 transition hover:shadow-[2px_2px_0] hover:translate-y-px border-2">
+				See More
+			</a>
 		</div>
 		<div
 			class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-start gap-6">
@@ -55,14 +59,14 @@
 				</div>
 				<div class="py-8">
 					<img
-						:src="project.image"
+						:src="project.logo"
 						alt="Thumbnail"
 						class="rounded-full size-26 mx-auto mb-8" />
 					<div class="flex items-center justify-center">
 						<i class="bx bx-radio-circle-marked"></i>
 					</div>
 					<div
-						class="translate-y-60 md:translate-y-48 lg:translate-y-0 lg:group-hover:translate-y-14 transition-all duration-500 ease-in-out">
+						class="mobile-s:translate-y-32 mobile-m:translate-y-46 mobile-l:translate-y-60 md:translate-y-48 lg:translate-y-0 lg:group-hover:translate-y-14 transition-all duration-500 ease-in-out">
 						<h3
 							class="my-2 text-center font-bold font-federo text-xl tracking-wide">
 							{{ project.title }}
@@ -71,7 +75,7 @@
 					</div>
 				</div>
 				<div
-					class="h-62 md:h-52 lg:max-h-0 lg:group-hover:max-h-[34px] transition-all ease-in-out duration-500">
+					class="mobile-s:h-30 mobile-m:h-44 mobile-l:h-60 md:h-52 lg:max-h-0 lg:group-hover:max-h-[34px] transition-all ease-in-out duration-500">
 					<span class="opacity-0">
 						Lorem ipsum dolor sit amet consectetur adipisicing elit.
 						Cupiditate a dolores nesciunt esse harum quidem incidunt

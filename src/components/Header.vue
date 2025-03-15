@@ -58,10 +58,26 @@
 				</div>
 				<div class="my-20 border-t"></div>
 				<div class="flex flex-col gap-y-4">
-					<a href="#hero" @click="isOpen = !isOpen">Home</a>
-					<a href="#services" @click="isOpen = !isOpen">Services</a>
-					<a href="#projects" @click="isOpen = !isOpen">Projects</a>
-					<a href="#about" @click="isOpen = !isOpen">About</a>
+					<a
+						href="#hero"
+						@click="isOpen = !isOpen">
+						Home
+					</a>
+					<a
+						href="#services"
+						@click="isOpen = !isOpen">
+						Services
+					</a>
+					<a
+						href="#projects"
+						@click="isOpen = !isOpen">
+						Projects
+					</a>
+					<a
+						href="#about"
+						@click="isOpen = !isOpen">
+						About
+					</a>
 				</div>
 				<div class="my-20 border-t"></div>
 				<div class="flex justify-between">
@@ -72,7 +88,8 @@
 						<a href="https://github.com/zyalwfie">
 							<i class="bx bxl-github bx-sm"></i>
 						</a>
-						<a href="https://www.linkedin.com/in/ziyad-alwafie-798373258/">
+						<a
+							href="https://www.linkedin.com/in/ziyad-alwafie-798373258/">
 							<i class="bx bxl-linkedin bx-sm"></i>
 						</a>
 					</div>
