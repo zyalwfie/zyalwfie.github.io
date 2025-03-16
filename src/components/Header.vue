@@ -78,6 +78,11 @@
 						@click="isOpen = !isOpen">
 						About
 					</a>
+					<a
+						href="#contact"
+						@click="isOpen = !isOpen">
+						Contact
+					</a>
 				</div>
 				<div class="my-20 border-t"></div>
 				<div class="flex justify-between">
@@ -129,6 +134,11 @@
 					href="#about"
 					class="text-lg transition hover:text-gray-500">
 					About
+				</a>
+				<a
+					href="#contact"
+					class="text-lg transition hover:text-gray-500">
+					Contact
 				</a>
 			</div>
 			<button

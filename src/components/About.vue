@@ -1,7 +1,7 @@
 <template>
 	<section
 		id="about"
-		class="scroll-mt-34 mt-60 lg:mt-0 lg:scroll-mt-20 flex flex-col lg:flex-row gap-16 px-4 md:px-8 pb-26 lg:px-16 xl:px-64 lg:h-lvh lg:justify-center lg:items-center">
+		class="scroll-mt-34 my-60 lg:mt-0 lg:scroll-mt-20 flex flex-col lg:flex-row gap-16 px-4 md:px-8 lg:px-16 xl:px-64 lg:h-lvh lg:justify-center lg:items-center">
 		<div
 			class="outline-4 lg:flex-1 p-2 dark:outline-white overflow-hidden w-full lg:w-auto flex justify-center lg:rounded-full">
 			<img
