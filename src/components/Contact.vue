@@ -75,8 +75,12 @@
 										class="bx bx-clipboard"></i>
 								</span>
 								<p
-									:class="[phoneCopied ? 'opacity-100' : 'opacity-0']"
-									class="text-xs font-anonymousPro italic opacity-0 transition">
+									:class="[
+										'text-xs font-anonymousPro italic transition',
+										phoneCopied
+											? 'opacity-100'
+											: 'opacity-0',
+									]">
 									copied!
 								</p>
 							</div>
@@ -106,8 +110,12 @@
 										class="bx bx-clipboard"></i>
 								</span>
 								<p
-									:class="[emailCopied ? 'opacity-100' : 'opacity-0']"
-									class="text-xs font-anonymousPro italic opacity-0 transition">
+									:class="[
+										'text-xs font-anonymousPro italic transition',
+										emailCopied
+											? 'opacity-100'
+											: 'opacity-0',
+									]">
 									copied!
 								</p>
 							</div>
@@ -140,81 +148,76 @@
 							class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-8">
 							<div>
 								<label
-									for=""
+									for="name_first"
 									class="text-base font-medium">
-									Your name
+									First name
+								</label>
+								<div class="mt-2.5 relative">
+									<input
+										id="name_first"
+										type="text"
+										placeholder="Enter your first name"
+										class="block w-full px-4 py-4 font-anonymousPro placeholder:font-biryani transition-all duration-200 border-2 shadow-[5px_5px_0] focus-visible:outline-none focus-visible:shadow-[2px_2px_0] focus-visible:translate-y-px" />
+								</div>
+							</div>
+
+							<div>
+								<label
+									for="name_last"
+									class="text-base font-medium">
+									Last name
 								</label>
 								<div class="mt-2.5 relative">
 									<input
 										type="text"
-										name=""
-										id=""
-										placeholder="Enter your full name"
+										id="name_last"
+										placeholder="Enter your last name"
 										class="block w-full px-4 py-4 font-anonymousPro placeholder:font-biryani transition-all duration-200 border-2 shadow-[5px_5px_0] focus-visible:outline-none focus-visible:shadow-[2px_2px_0] focus-visible:translate-y-px" />
 								</div>
 							</div>
 
 							<div>
 								<label
-									for=""
-									class="text-base font-medium">
-									Email address
-								</label>
-								<div class="mt-2.5 relative">
-									<input
-										type="email"
-										name=""
-										id=""
-										placeholder="Enter your full name"
-										class="block w-full px-4 py-4 font-anonymousPro placeholder:font-biryani transition-all duration-200 border-2 shadow-[5px_5px_0] focus-visible:outline-none focus-visible:shadow-[2px_2px_0] focus-visible:translate-y-px" />
-								</div>
-							</div>
-
-							<div>
-								<label
-									for=""
+									for="phone"
 									class="text-base font-medium">
 									Phone number
 								</label>
 								<div class="mt-2.5 relative">
 									<input
 										type="tel"
-										name=""
-										id=""
-										placeholder="Enter your full name"
+										id="phone"
+										placeholder="Enter your phone number"
 										class="block w-full px-4 py-4 font-anonymousPro placeholder:font-biryani transition-all duration-200 border-2 shadow-[5px_5px_0] focus-visible:outline-none focus-visible:shadow-[2px_2px_0] focus-visible:translate-y-px" />
 								</div>
 							</div>
 
 							<div>
 								<label
-									for=""
+									for="email"
 									class="text-base font-medium">
-									Company name
+									Email
 								</label>
 								<div class="mt-2.5 relative">
 									<input
-										type="text"
-										name=""
-										id=""
-										placeholder="Enter your full name"
+										type="email"
+										id="email"
+										placeholder="Enter your email"
 										class="block w-full px-4 py-4 font-anonymousPro placeholder:font-biryani transition-all duration-200 border-2 shadow-[5px_5px_0] focus-visible:outline-none focus-visible:shadow-[2px_2px_0] focus-visible:translate-y-px" />
 								</div>
 							</div>
 
 							<div class="sm:col-span-2">
 								<label
-									for=""
+									for="message"
 									class="text-base font-medium">
 									Message
 								</label>
 								<div class="mt-2.5 relative">
 									<textarea
-										name=""
-										id=""
-										placeholder=""
+										id="message"
+										placeholder="Enter your message"
 										class="block w-full px-4 py-4 transition-all duration-200 border-2 shadow-[5px_5px_0] focus-visible:outline-none focus-visible:shadow-[2px_2px_0] focus-visible:translate-y-px font-anonymousPro resize-y"
-										rows="4"></textarea>
+										rows="8"></textarea>
 								</div>
 							</div>
 

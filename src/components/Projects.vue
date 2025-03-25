@@ -41,7 +41,7 @@
 			<a
 				href="#"
 				class="shadow-[5px_5px_0] px-4 py-1 transition hover:shadow-[2px_2px_0] hover:translate-y-px border-2">
-				See More
+				...
 			</a>
 		</div>
 		<div

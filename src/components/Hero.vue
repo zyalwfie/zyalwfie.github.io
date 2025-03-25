@@ -13,16 +13,19 @@
 					class="hidden lg:block" />
 				building beautiful and functional experiences.
 			</p>
-			<div class="flex gap-3 dark:text-white">
+			<div class="flex items-center gap-8 dark:text-white">
 				<a
-					href="#"
+					href=""
+					download
 					class="button">
-					Download CV
+					CV Detail
 				</a>
 				<a
-					href="#"
-					class="button">
-					Contact me
+					target="_blank"
+					href="https://api.whatsapp.com/send?phone=6282147321636"
+					class="flex gap-x-2 group">
+					<p class="underline underline-offset-2">Call me</p>
+					<span class="flex text-lg items-center group-hover:-translate-y-1.5 group-hover:translate-x-px transition"><i class='bx bxs-right-top-arrow-circle'></i></span>
 				</a>
 			</div>
 		</div>

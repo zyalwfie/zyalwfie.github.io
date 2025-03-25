@@ -5,6 +5,7 @@
 	import Header from './components/Header.vue';
 	import Hero from './components/Hero.vue';
 	import Projects from './components/Projects.vue';
+	import Services from './components/Services.vue';
 </script>
 
 <template>
@@ -12,6 +13,7 @@
 
 	<main>
 		<Hero />
+		<Services />
 		<Projects />
 		<About />
 		<Contact />
