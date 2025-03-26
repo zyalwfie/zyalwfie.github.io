@@ -38,11 +38,11 @@
 				<i class="bx bxs-right-arrow"></i>
 				<span class="text-4xl font-bold font-federo">Projects</span>
 			</h2>
-			<a
+			<!-- <a
 				href="#"
 				class="shadow-[5px_5px_0] px-4 py-1 transition hover:shadow-[2px_2px_0] hover:translate-y-px border-2">
 				...
-			</a>
+			</a> -->
 		</div>
 		<div
 			class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-start gap-6">

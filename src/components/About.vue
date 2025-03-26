@@ -1,7 +1,7 @@
 <template>
 	<section
 		id="about"
-		class="scroll-mt-34 my-60 lg:mt-0 lg:scroll-mt-20 flex flex-col lg:flex-row gap-16 px-4 md:px-8 lg:px-16 xl:px-64 lg:h-lvh lg:justify-center lg:items-center">
+		class="scroll-mt-34 my-60 lg:mt-0 lg:scroll-mt-0 flex flex-col lg:flex-row gap-16 px-4 md:px-8 lg:px-16 xl:px-64 lg:h-lvh lg:justify-center lg:items-center">
 		<div
 			class="outline-4 lg:flex-1 p-2 dark:outline-white overflow-hidden w-full lg:w-auto flex justify-center lg:rounded-full">
 			<img
@@ -13,7 +13,7 @@
 			<div class="flex flex-col gap-y-2">
 				<h3 class="text-4xl font-bold font-federo">A Bit About Me</h3>
 				<p>
-					Hi! I'm a technical engineering student currently in my 8th
+					Hi! I'm a technical engineering student currently in my 8<sup>th</sup>
 					semester, passionate about coding and problem-solving. I
 					have a strong interest in becoming a full-stack developer,
 					where I can merge frontend aesthetics with backend

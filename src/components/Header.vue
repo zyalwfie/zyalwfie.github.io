@@ -24,7 +24,7 @@
 <template>
 	<header
 		:class="[
-			'fixed inset-x-0 top-0 z-10 flex items-center px-4 py-6 md:px-8 lg:px-16 xl:px-64 dark:text-white bg-white dark:bg-black transition-all duration-300',
+			'fixed inset-x-0 top-0 z-50 flex items-center px-4 py-6 md:px-8 lg:px-16 xl:px-64 dark:text-white bg-white dark:bg-black transition-all duration-300',
 			hasShadow ? 'shadow-lg' : 'shadow-none',
 		]">
 		<a

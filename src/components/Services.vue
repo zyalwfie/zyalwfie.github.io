@@ -32,7 +32,7 @@
 <template>
 	<section
 		id="services"
-		class="scroll-mt-32 mt-32 lg:mt-0 lg:min-h-screen flex flex-col items-start justify-center gap-y-4 px-4 md:px-8 lg:px-16 xl:px-64 dark:text-white">
+		class="scroll-mt-32 lg:scroll-mt-0 mt-32 lg:mt-0 lg:min-h-screen flex flex-col items-start justify-center gap-y-4 px-4 md:px-8 lg:px-16 xl:px-64 dark:text-white">
 		<div class="flex justify-start mb-8 dark:text-white">
 			<h2 class="flex gap-x-4 items-center font-federo">
 				<i class="bx bxs-right-arrow"></i>
