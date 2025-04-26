@@ -4,27 +4,30 @@
 	const projects = ref([
 		{
 			title: 'Database Warga',
-			index: '01',
-			image: '/images/projects-thumbnail/db-warga.png',
+			description: 'MSIB capstone project (Independent Study) managing citizen data for a village or organization that is still not well managed.',
+			tags: ['Laravel', 'PHP', 'Javascript', 'MySQL'],
+			image: '/images/projects-thumbnail/db-warga.jpg',
 			logo: '/images/projects-logo/db-warga-logo.svg',
+			code: null,
+			isAvailable: false
 		},
 		{
 			title: 'Fund Together',
-			index: '02',
-			image: '/images/projects-thumbnail/fund-together.png',
+			description: 'Template UI use for crowd funding app, like donation or alms',
+			tags: ['Tailwind CSS', 'CSS', 'HTML5', 'Javascript'],
+			image: '/images/projects-thumbnail/fund-together.jpg',
 			logo: '/images/projects-logo/fund-together-logo.svg',
-		},
-		{
-			title: 'Klik Gontoran',
-			index: '03',
-			image: '/images/projects-thumbnail/klik-gontoran.png',
-			logo: '/images/projects-logo/klik-gontoran-logo.svg',
+			code: 'https://github.com/zyalwfie/fund-together',
+			isAvailable: true
 		},
 		{
 			title: 'Kusaku',
-			index: '04',
-			image: '/images/projects-thumbnail/kusaku.png',
+			description: 'Template UI for e-wallet app, can be use to track you money spend and your financial savings',
+			tags: ['Tailwind CSS', 'HTML5', 'CSS', 'Javascript'],
+			image: '/images/projects-thumbnail/kusaku.jpg',
 			logo: '/images/projects-logo/kusaku-logo.svg',
+			code: 'https://github.com/zyalwfie/kusaku',
+			isAvailable: true
 		},
 	]);
 </script>
@@ -38,50 +41,37 @@
 				<i class="bx bxs-right-arrow"></i>
 				<span class="text-4xl font-bold font-federo">Projects</span>
 			</h2>
-			<!-- <a
-				href="#"
-				class="shadow-[5px_5px_0] px-4 py-1 transition hover:shadow-[2px_2px_0] hover:translate-y-px border-2">
-				...
-			</a> -->
 		</div>
 		<div
-			class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-start gap-6">
-			<article
-				v-for="project in projects"
-				:key="project.index"
-				class="relative shadow-[5px_5px_0] border-2 transition-all duration-500 ease-in-out group overflow-hidden dark:text-white">
-				<div
-					class="absolute h-full w-full lg:scale-y-0 origin-top group-hover:scale-y-100 transition duration-500 ease-in-out">
-					<img
-						:src="project.image"
-						alt="Thumbnail"
-						class="object-cover" />
-				</div>
-				<div class="py-8">
-					<img
-						:src="project.logo"
-						alt="Thumbnail"
-						class="rounded-full size-26 mx-auto mb-8" />
-					<div class="flex items-center justify-center">
-						<i class="bx bx-radio-circle-marked"></i>
-					</div>
-					<div
-						class="mobile-s:translate-y-32 mobile-m:translate-y-46 mobile-l:translate-y-60 md:translate-y-48 lg:translate-y-0 lg:group-hover:translate-y-14 transition-all duration-500 ease-in-out">
-						<h3
-							class="my-2 text-center font-bold font-federo text-xl tracking-wide">
-							{{ project.title }}
-						</h3>
-						<p class="text-center text-base">{{ project.index }}</p>
-					</div>
-				</div>
-				<div
-					class="mobile-s:h-30 mobile-m:h-44 mobile-l:h-60 md:h-52 lg:max-h-0 lg:group-hover:max-h-[34px] transition-all ease-in-out duration-500">
-					<span class="opacity-0">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit.
-						Cupiditate a dolores nesciunt esse harum quidem incidunt
-						placeat eius perspiciatis nam.
-					</span>
-				</div>
+			class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start gap-6">
+			<article v-for="(project, index) in projects" :key="index">
+				<section class="transition border-2 shadow-[5px_5px_0] dark:text-white dark:shadow-white hover:shadow-[2px_2px_0] hover:translate-y-px">
+					<header class="overflow-hidden">
+						<img :src=project.image :alt=project.title>
+					</header>
+					<main class="p-6 flex flex-col gap-4">
+						<h3 class="font-federo text-3xl">{{ project.title }}</h3>
+						<p class="line-clamp-2">{{ project.description }}</p>
+						<div class="flex gap-2 overflow-x-auto">
+							<span v-for="(tag, index) in project.tags" :key="index" class="border shadow-[2px_2px_0] min-w-max px-2 py-1">
+								{{ tag }}
+							</span>
+						</div>
+					</main>
+					<footer class="px-6 pb-6 flex items-center gap-4">
+						<button disabled class="button cursor-not-allowed">
+							Preview
+						</button>
+							<a v-if="project.isAvailable" :href="project.code" class="button flex items-center gap-2">
+								<i class='bx bxl-github bx-sm'></i>
+								<span>Code</span>
+							</a>
+							<button v-else disabled class="button flex items-center gap-2 cursor-not-allowed">
+								<i class='bx bxl-github bx-sm'></i>
+								<span>Code</span>
+							</button>
+					</footer>
+				</section>
 			</article>
 		</div>
 	</section>

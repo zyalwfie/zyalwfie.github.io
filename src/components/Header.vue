@@ -59,11 +59,6 @@
 				<div class="my-20 border-t"></div>
 				<div class="flex flex-col gap-y-4">
 					<a
-						href="#hero"
-						@click="isOpen = !isOpen">
-						Home
-					</a>
-					<a
 						href="#services"
 						@click="isOpen = !isOpen">
 						Services
@@ -115,11 +110,6 @@
 
 		<nav class="hidden md:flex flex-1 justify-end items-center gap-x-8">
 			<div class="flex gap-x-4">
-				<a
-					href="#hero"
-					class="text-lg transition hover:text-gray-500">
-					Home
-				</a>
 				<a
 					href="#services"
 					class="text-lg transition hover:text-gray-500">
