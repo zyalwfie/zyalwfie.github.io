@@ -1,6 +1,41 @@
+<script setup>
+	import { ref } from 'vue';
+	import Viewer from 'viewerjs';
+	import 'viewerjs/dist/viewer.css';
+
+	const viewerContainer = ref(null);
+	let viewerInstance = null;
+
+	const openViewer = () => {
+		if (!viewerInstance) {
+			viewerInstance = new Viewer(viewerContainer.value, {
+				backdrop: true,
+				toolbar: true,
+				movable: true,
+				zoomable: true,
+				scalable: true,
+				fullscreen: true,
+				transition: true,
+			});
+		}
+		viewerInstance.show();
+	};
+</script>
+
 <template>
-	<section id="hero"
+	<section
+		id="hero"
 		class="scroll-mt-22 flex md:h-lvh flex-col gap-y-12 lg:flex-row items-start lg:justify-between lg:items-center px-4 md:px-8 pt-26 md:pt-32 lg:pt-20 lg:px-16 xl:px-64">
+		<!-- Modal -->
+		<div
+			ref="viewerContainer"
+			style="display: none">
+			<img
+				src="/images/cv/wafy-cv.jpg"
+				alt="CV Detail" />
+		</div>
+
+		<!-- Hero Section -->
 		<div
 			class="flex flex-col gap-y-4"
 			data-aos="fade-right"
@@ -14,21 +49,24 @@
 				building beautiful and functional experiences.
 			</p>
 			<div class="flex items-center gap-8 dark:text-white">
-				<a
-					href=""
-					download
+				<button
+					@click="openViewer"
 					class="button">
 					CV Detail
-				</a>
+				</button>
 				<a
 					target="_blank"
 					href="https://api.whatsapp.com/send?phone=6282147321636"
 					class="flex gap-x-2 group">
 					<p class="underline underline-offset-2">Call me</p>
-					<span class="flex text-lg items-center group-hover:-translate-y-1.5 group-hover:translate-x-px transition"><i class='bx bxs-right-top-arrow-circle'></i></span>
+					<span
+						class="flex text-lg items-center group-hover:-translate-y-1.5 group-hover:translate-x-px transition">
+						<i class="bx bxs-right-top-arrow-circle"></i>
+					</span>
 				</a>
 			</div>
 		</div>
+
 		<div
 			data-aos-duration="800"
 			data-aos="fade-left"
