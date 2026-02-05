@@ -1,5 +1,5 @@
-import CircularText from '@/components/CircularText';
 import Grainient from '@/components/Grainient';
+import { ProjectWrapper } from '@/components/landing/projects';
 import RotatingText from '@/components/RotatingText';
 import ScrollReveal from '@/components/ScrollReveal';
 import { Button } from '@/components/ui/button';
@@ -7,13 +7,13 @@ import { ArrowUpRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function Home() {
+export default async function Home() {
 	return (
 		<>
 			<main>
 				{/* Hero Section */}
-				<section className='px-4 md:px-12 xl:px-20 flex flex-col gap-y-16 xl:gap-y-12 items-center'>
-					<div className='grid grid-cols-1 xl:grid-cols-[1fr_auto_1fr] h-screen text-ghostWhite xl:gap-x-12'>
+				<section className='px-4 md:px-12 xl:px-20 flex flex-col gap-y-16 xl:gap-y-4 items-center'>
+					<div className='grid grid-cols-1 md:gap-y-4 xl:grid-cols-[1fr_auto_1fr] h-screen text-ghostWhite xl:gap-x-12'>
 						<div className='flex flex-col gap-2 justify-end items-center xl:justify-center xl:items-end'>
 							<h1 className='text-5xl md:text-6xl bricolage'>
 								Ziyad Alwafie
@@ -27,7 +27,7 @@ export default function Home() {
 							</div>
 						</div>
 						<div className='place-items-center place-content-center'>
-							<div className='aspect-square rounded-full border-2 border-cerulean p-1 relative'>
+							<div className='aspect-square md:size-100 xl:size-120 rounded-full border-2 border-cerulean p-1 relative'>
 								<div className='size-full relative rounded-full overflow-hidden'>
 									<Grainient
 										color1='#ffcb47'
@@ -43,7 +43,7 @@ export default function Home() {
 										blendSoftness={0.05}
 										rotationAmount={500}
 										noiseScale={2}
-										grainAmount={0.1}
+										grainAmount={0}
 										grainScale={2}
 										grainAnimated={false}
 										contrast={1.5}
@@ -54,14 +54,6 @@ export default function Home() {
 										zoom={1}
 										className='z-0'
 									/>
-									<div className='absolute inset-2 text-shadow-lg'>
-										<CircularText
-											text='ZIYAD ALWAFIE • FULLSTACK WEB DEVELOPER • '
-											onHover='speedUp'
-											spinDuration={20}
-											className='size-full'
-										/>
-									</div>
 								</div>
 								<Image
 									src='/images/Ziyad.png'
@@ -69,12 +61,12 @@ export default function Home() {
 									height={350}
 									width={350}
 									loading='eager'
-									className='absolute top-20 left-1/2 -translate-x-1/2'
+									className='absolute top-20 left-1/2 -translate-x-1/2 xl:size-110'
 								/>
 							</div>
 						</div>
-						<div className='place-content-center mt-8 lg:mt-0'>
-							<h1 className='text-3xl md:text-4xl bricolage text-start'>
+						<div className='place-content-center md:mt-8'>
+							<h1 className='text-3xl md:text-4xl bricolage text-center xl:text-start'>
 								Building{' '}
 								<RotatingText
 									texts={[
@@ -95,14 +87,15 @@ export default function Home() {
 										stiffness: 400,
 									}}
 									rotationInterval={2500}
-								/>{' '}
+								/>
+								<br />
 								Digital Products
 							</h1>
 						</div>
 					</div>
 					<div className='flex flex-col items-center max-w-3xl xl:max-w-4xl'>
 						<ScrollReveal
-							baseOpacity={.8}
+							baseOpacity={0.8}
 							enableBlur
 							baseRotation={3}
 							blurStrength={4}
@@ -126,6 +119,23 @@ export default function Home() {
 					</div>
 				</section>
 				{/* Hero Section End */}
+
+				{/* Projects Section */}
+				<section className='my-30 flex flex-col gap-12'>
+					<div className='flex items-center h-12 justify-center relative'>
+						<div className='absolute border-b border-ghostWhite top-1/2 left-1/2 -translate-1/2 w-full'></div>
+						<div className='absolute top-1/2 left-1/2 -translate-1/2 bg-onyx flex items-center flex-col gap-1 px-4 xl:px-12'>
+							<h2 className='bricolage text-ghostWhite text-2xl md:text-3xl min-w-max xl:text-4xl'>
+								Discover my creative expertise
+							</h2>
+							<p className='text-ghostWhite xl:text-lg'>
+								Check out some of my selected projects
+							</p>
+						</div>
+					</div>
+					<ProjectWrapper />
+				</section>
+				{/* Projects Section End */}
 			</main>
 		</>
 	);

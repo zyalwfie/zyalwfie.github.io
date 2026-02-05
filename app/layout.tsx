@@ -12,8 +12,8 @@ const saira = localFont({
 const bricolageGrotesque = localFont({
 	src: '../public/fonts/BricolageGrotesque-VariableFont.ttf',
 	variable: '--font-bricolage',
-  weight: '200 800',
-  display: 'swap'
+	weight: '200 800',
+	display: 'swap',
 });
 
 export const metadata: Metadata = {
@@ -27,10 +27,11 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-			<html lang='en' className={`${saira.variable} ${bricolageGrotesque.variable}`}>
-				<body className='antialiased bg-onyx'>
-					{children}
-				</body>
-			</html>
+		<html
+			lang='en'
+			className={`${saira.variable} ${bricolageGrotesque.variable}`}
+		>
+			<body className='antialiased bg-onyx'>{children}</body>
+		</html>
 	);
 }
