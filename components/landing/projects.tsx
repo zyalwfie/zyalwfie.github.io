@@ -4,7 +4,6 @@ import { fetchProjectMenu } from '@/lib/data';
 
 export async function ProjectWrapper() {
 	const projects = await fetchProjectMenu();
-    console.log(projects);
 
 	return (
 		<div className='h-150 relative'>

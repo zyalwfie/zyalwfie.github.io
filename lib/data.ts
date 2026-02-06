@@ -30,7 +30,10 @@ export async function fetchProjectMenu(filter: Record<string, unknown> = {}): Pr
         const image = (d as any).images?.preview as string | undefined;
 
         return {
-            link: slug ? `/projects/${slug}` : '#',
+            // * Uncomment this if detail project page has been created
+            // link: slug ? `/projects/${slug}` : '#',
+            
+            link: '#',
             text: title ?? 'Untitled project',
             image: image ?? '',
         } as ProjectMenuTypes;

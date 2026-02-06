@@ -32,6 +32,15 @@ export default function RootLayout({
 			className={`${saira.variable} ${bricolageGrotesque.variable}`}
 		>
 			<body className='antialiased bg-onyx'>{children}</body>
+
+			<footer className='text-ghostWhite px-4 md:px-12 xl:px-20 grid grid-cols-1 md:grid-cols-[auto_auto_auto] pb-8'>
+				<div className='text-start text-sm'>&copy;2026 Ziyad A.</div>
+				<div className='flex items-center justify-center gap-2'>
+					<span className='size-3 block rounded-full bg-green-500 animate-pulse transition'></span>
+					Available for a full-time position
+				</div>
+				<div className='text-end text-sm'>Made by Ziyad A.</div>
+			</footer>
 		</html>
 	);
 }

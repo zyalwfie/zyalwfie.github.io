@@ -3,6 +3,15 @@ import { ProjectWrapper } from '@/components/landing/projects';
 import RotatingText from '@/components/RotatingText';
 import ScrollReveal from '@/components/ScrollReveal';
 import { Button } from '@/components/ui/button';
+import {
+	Card,
+	CardAction,
+	CardContent,
+	CardDescription,
+	CardFooter,
+	CardHeader,
+	CardTitle,
+} from '@/components/ui/card';
 import { ArrowUpRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -136,6 +145,51 @@ export default async function Home() {
 					<ProjectWrapper />
 				</section>
 				{/* Projects Section End */}
+
+				{/* Info Section */}
+				<section className='px-4 md:px-12 xl:px-20 mb-4'>
+					<Card className='bg-transparent border-graphite text-ghostWhite flex flex-col items-center'>
+						<CardHeader className='w-full text-center bricolage text-xl xl:text-3xl'>
+							<CardTitle>Looking for a new talent?</CardTitle>
+						</CardHeader>
+						<CardContent>
+							<p className='text-4xl xl:text-6xl'>
+								zyalwfie@gmail.com
+							</p>
+						</CardContent>
+						<CardFooter className='flex gap-4 items-center'>
+							<Button
+								asChild
+								variant={'ghost'}
+								className='text-ghostWhite text-lg cursor-pointer group hover:text-cerulean'
+							>
+								<Link
+									href={
+										'https://www.linkedin.com/in/ziyat-al-wafi-798373258/'
+									}
+									target='_blank'
+								>
+									<ArrowUpRight className='group-hover:scale-125' />
+									LinkedIn
+								</Link>
+							</Button>
+							<Button
+								asChild
+								variant={'ghost'}
+								className='text-ghostWhite text-lg cursor-pointer group hover:text-cerulean'
+							>
+								<Link
+									href={'/files/wafy-cv.pdf'}
+									target='_blank'
+								>
+									<ArrowUpRight className='group-hover:scale-125' />
+									Download CV
+								</Link>
+							</Button>
+						</CardFooter>
+					</Card>
+				</section>
+				{/* Info Section End */}
 			</main>
 		</>
 	);
